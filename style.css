@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4;
+    padding: 30px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .interactive-box {
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .box-header {
+    padding: 20px;
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+  
+  .box-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  }
+  
+  .interactive-box.active .box-content {
+    padding: 20px;
+    max-height: 300px;
+  }
+  
+  .box-content label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  
+  .box-content select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+  }
+  
